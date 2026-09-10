@@ -1,0 +1,6 @@
+torch>=2.6,<3
+transformers>=4.57.1,<5
+accelerate>=1.0,<2
+scikit-learn>=1.5,<2
+numpy>=1.26,<3
+safetensors>=0.4.5

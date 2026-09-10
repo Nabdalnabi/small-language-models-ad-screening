@@ -1,0 +1,33 @@
+# Data and original notebooks must stay local.
+*.csv
+*.tsv
+*.xlsx
+*.ipynb
+*.pdf
+*.jsonl
+*.parquet
+*.wav
+*.mp3
+*.cha
+data/
+datasets/
+private/
+# Locally trained weights and all run outputs
+runs/
+outputs/
+checkpoints/
+logs/
+wandb/
+*.bin
+*.pt
+*.pth
+*.safetensors
+# Credentials and environment
+.env
+.env.*
+secrets/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
