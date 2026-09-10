@@ -1,8 +1,6 @@
 # Small Language Models for Alzheimer's Speech Screening
 
-Research code samples from Nader Abdalnabi's collaborative work on local
-classification of speech transcripts using small language models. This private
-repository demonstrates full fine-tuning, validation-based checkpoint selection,
+Research code samples on local classification of speech transcripts using small language models. This private repository demonstrates full fine-tuning, validation-based checkpoint selection,
 and separate evaluation with DeepSeek, GPT-2, or SmolLM2.
 
 ## Research
@@ -13,16 +11,16 @@ Speech Screening**
 Venkatanand Ram Addepalli, Nader Abdalnabi, Erich Kummerfeld, Guy Hembroff,
 Andrew Kiselica, Praveen Rao, and Knoo Lee.
 
-[Paper link supplied by the author](https://openreview.net/pdf?id=W4i1HQSd2K)
+[Paper link](https://openreview.net/pdf?id=W4i1HQSd2K)
 
 Related preprint: **Small-Sized Reasoning Language Models for Linguistic Screening
 of Alzheimer's Disease**,
 [DOI: 10.64898/2025.12.24.25342972](https://doi.org/10.64898/2025.12.24.25342972).
 
-The supplied *Evaluating Open-Source Small* manuscript reports 91.67% accuracy
+The study *Evaluating Open-Source Small*  reports 91.67% accuracy
 and 91.71% F1 for full fine-tuning of DeepSeek-R1 (1.5B), compared with 70.0%
 accuracy for its Phi-3 baseline. These are manuscript results, not measurements
-from this refactored code. The research uses Cookie Theft picture-description
+from this refactored code. The research uses approval-request publicly available Cookie Theft picture-description
 transcripts from the DementiaBank Pitt Corpus. Obtain data through its authorized
 access process; no transcripts or paper figures are redistributed here.
 
