@@ -1,6 +1,6 @@
 # Small Language Models for Alzheimer's Speech Screening
 
-Research code samples on local classification of speech transcripts using small language models. This private repository demonstrates full fine-tuning, validation-based checkpoint selection,
+Research code samples on local classification of speech transcripts using small language models. This public code-only repository demonstrates full fine-tuning, validation-based checkpoint selection,
 and separate evaluation with DeepSeek, GPT-2, or SmolLM2.
 
 ## Research
@@ -20,9 +20,11 @@ of Alzheimer's Disease**,
 The study *Evaluating Open-Source Small*  reports 91.67% accuracy
 and 91.71% F1 for full fine-tuning of DeepSeek-R1 (1.5B), compared with 70.0%
 accuracy for its Phi-3 baseline. These are manuscript results, not measurements
-from this refactored code. The research uses approval-request publicly available Cookie Theft picture-description
-transcripts from the DementiaBank Pitt Corpus. Obtain data through its authorized
-access process; no transcripts or paper figures are redistributed here.
+from this refactored code. The research uses restricted-access Cookie Theft picture-description
+transcripts from the DementiaBank Pitt Corpus. These are not freely redistributable
+open data. Obtain access through [DementiaBank](https://talkbank.org/dementia/access.html)
+and follow the [TalkBank ground rules](https://talkbank.org/0share/rules.html).
+No transcripts, audio, private CSVs, or paper figures are redistributed here.
 
 ## Why This Implementation
 
