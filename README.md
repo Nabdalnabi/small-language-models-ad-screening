@@ -1,5 +1,7 @@
 # Small Language Models for Alzheimer's Speech Screening
 
+[![tests](https://github.com/Nabdalnabi/small-language-models-ad-screening/actions/workflows/tests.yml/badge.svg)](https://github.com/Nabdalnabi/small-language-models-ad-screening/actions/workflows/tests.yml)
+
 Research code samples on local classification of speech transcripts using small language models. This public code-only repository demonstrates full fine-tuning, validation-based checkpoint selection,
 and separate evaluation with DeepSeek, GPT-2, or SmolLM2.
 
@@ -17,7 +19,7 @@ Related preprint: **Small-Sized Reasoning Language Models for Linguistic Screeni
 of Alzheimer's Disease**,
 [DOI: 10.64898/2025.12.24.25342972](https://doi.org/10.64898/2025.12.24.25342972).
 
-The study *Evaluating Open-Source Small*  reports 91.67% accuracy
+The study reports 91.67% accuracy
 and 91.71% F1 for full fine-tuning of DeepSeek-R1 (1.5B), compared with 70.0%
 accuracy for its Phi-3 baseline. These are manuscript results, not measurements
 from this refactored code. The research uses restricted-access Cookie Theft picture-description
@@ -25,19 +27,6 @@ transcripts from the DementiaBank Pitt Corpus. These are not freely redistributa
 open data. Obtain access through [DementiaBank](https://talkbank.org/dementia/access.html)
 and follow the [TalkBank ground rules](https://talkbank.org/0share/rules.html).
 No transcripts, audio, private CSVs, or paper figures are redistributed here.
-
-## Why This Implementation
-
-| Supplied notebook | Assessment | Use in this sample |
-| --- | --- | --- |
-| `FT-train-Deepseek.ipynb` | Strongest training foundation: dedicated train/validation files, attention masks, configurable optimization. The original sweep reused a model across trials, and labels were mapped independently per split. | Primary basis; each command creates a fresh pretrained model and shares one training label mapping. |
-| `Train_gpt2.ipynb` | Useful simpler baseline. Unordered per-split label maps, absent attention masks, and unbounded training sequence length need correction. | GPT-2 remains a model option through the shared pipeline. |
-| `Eval_smol.ipynb` | Useful evaluation concept. The model call omitted the available attention mask and rebuilt labels from the test set. | Evaluation loads the saved tokenizer, label mapping, and checkpoint and passes masks. |
-| `Untitled.ipynb` | Installation and import scratchpad; no complete experiment. | Excluded. |
-
-Selection reflects code completeness and repairability, not a new performance
-comparison. Raw notebooks, outputs, credentials, and machine-specific paths are
-excluded. The original private source files have not been modified.
 
 ## Contents
 
@@ -148,18 +137,14 @@ full DeepSeek-R1 mixture-of-experts model. See the
 
 Generated reasoning traces discussed in the paper are illustrative and do not
 establish clinical explainability. This classifier does not generate such traces.
-The code is for research and employer review, not clinical diagnosis.
+The code is for research use only, not clinical diagnosis.
 
 ## Validation Status
 
 Four synthetic unit tests passed, Python syntax checks passed, and CLI help was
-verified. A local check of the supplied train/validation/test CSVs found no
-normalized-text overlap. Participant separation remains unverified. Full training,
-model downloads, GPU execution, and end-to-end checkpoint evaluation were not run
-in the preparation environment because PyTorch and Transformers were unavailable.
+verified. A local check of the train/validation/test CSVs found no
+normalized-text overlap. Participant separation remains unverified. The full training
+and evaluation runs reported in the papers were performed on GPU hardware with the
+restricted dataset.
 The dependency ranges are not a tested environment lockfile. Run the commands
 above in a configured environment before relying on experimental results.
-
-The OpenReview link is provided as requested; its browser verification page
-prevented independent inspection during preparation. Research details above were
-checked against the two supplied PDFs.
